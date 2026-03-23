@@ -1,5 +1,15 @@
-# REGRAS DO GRUPO
+# 📌 SPRINT 1
 
+## 👥 Integrantes
+- Lara Willi Binotti
+- Raphael de Oliveira
+- Matheus Bernardino Gomes
+- Yuri Garcia Pardinho
+- Isabelle Oliveira Schmidt
+- Guilherme Ferreira Moura
+- Júlia Silva de Lemos
+
+## 📋 Regras da Equipe
 - Os integrantes devem participar das reuniões, sendo obrigatória a notificação prévia em caso de ausência.
 - Em caso de ausência, o integrante não participará das decisões tomadas durante a reunião.
 - Todas as alterações realizadas no projeto devem ser devidamente notificadas ao grupo.
@@ -8,20 +18,11 @@
 - Todas as decisões serão tomadas de forma democrática entre os integrantes.
 - Todas as tarefas realizadas devem ser compartilhadas com o grupo, mantendo todos os membros atualizados.
 
-# PADRÃO DE ATA
-**ATA DE REUNIÃO <br>
-Data: <br>
-Horário: <br>
-Local: <br>
-Reunião: <br>
-Participantes: <br>
-Pauta: <br>**
+## 📅 Organização
+- Reuniões: Todas às quintas-feiras, 16:10h
+- Entregas: definidas em conjunto
 
-# INTEGRANTES
-Guilherme Moura  <br>
-Isabelle Schimidt  <br>
-Júlia Lemos  <br>
-Lara Willi Binotti  <br>
-Matheus Bernardino Gomes  <br>
-Raphael de Oliveira   <br>
+
+
+>
 Yuri Pardinho   <br>
