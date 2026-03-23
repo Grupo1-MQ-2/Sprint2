@@ -7,3 +7,12 @@
 - O integrante que não conseguir cumprir um prazo deverá notificar previamente o grupo, apresentando justificativa.
 - Todas as decisões serão tomadas de forma democrática entre os integrantes.
 - Todas as tarefas realizadas devem ser compartilhadas com o grupo, mantendo todos os membros atualizados.
+
+# INTEGRANTES
+Guilherme Moura
+Isabelle Schimidt
+Júlia Lemos
+Lara Willi Binotti
+Matheus Bernardino Gomes
+Raphael de Oliveira
+Yuri Pardinho
