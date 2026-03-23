@@ -9,10 +9,10 @@
 - Todas as tarefas realizadas devem ser compartilhadas com o grupo, mantendo todos os membros atualizados.
 
 # INTEGRANTES
-Guilherme Moura
-Isabelle Schimidt
-Júlia Lemos
-Lara Willi Binotti
-Matheus Bernardino Gomes
-Raphael de Oliveira
-Yuri Pardinho
+Guilherme Moura  <br>
+Isabelle Schimidt  <br>
+Júlia Lemos  <br>
+Lara Willi Binotti  <br>
+Matheus Bernardino Gomes  <br>
+Raphael de Oliveira   <br>
+Yuri Pardinho   <br>
