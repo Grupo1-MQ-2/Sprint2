@@ -22,6 +22,10 @@
 - Reuniões: Todas às quintas-feiras, 16:10h
 - Entregas: definidas em conjunto
 
+  ## 📄 Atas de Reunião
+
+- [Ata 1](./atas/ata1.md)
+
 
 
 
