@@ -26,6 +26,9 @@
 
 - [Ata 1](./atas/ata1.md)
 
+- [Modelo de Ata](./atas/modelo_ata.md)
+- [Ata 23/03](./atas/ata_2026-03-23.md)
+
 
 
 
