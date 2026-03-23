@@ -1,4 +1,4 @@
-# 📌 SPRINT 1
+# 📌 SPRINT 2
 
 ## 👥 Integrantes
 - Lara Willi Binotti
