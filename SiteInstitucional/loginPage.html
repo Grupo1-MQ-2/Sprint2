@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="script.js">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="div_LoginPage">
+        <div class="div_PainelInfo">
+            <h1 style="font-size: 33px; font-family: Verdana, Geneva, Tahoma, sans-serif;">Canalytics</h1>
+            <h2 style="font-size: 38px;">Monitoramento de queimadas em Canaviais</h2>
+            <p style="font-size: 22px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+                Acesse o sistema para visualizar as
+                leituras do sensor MQ-2 e acompanhar
+                alertas em tempo real.</p>
+            <ul>Sensor MQ-2 com Arduino Uno</ul>
+            <ul>Monitoramento contínuo de gás</ul>
+            <ul>Alertas automáticos de risco</ul>
+            <h5>Canalytics - 2026</h5>
+        </div>
+
+        <div class="div_LoginCard">
+            <div class="div_ipt_email">
+                E-mail<br>
+                <input id="ipt_email_user" type="email" placeholder="exemplo@gmail.com">
+            </div><br>
+
+            <div class="div_ipt_senha">
+                Senha <br>
+                <input id="ipt_senha_user" type="password" placeholder="********">
+            </div><br>
+
+            <div class="div_btn_Entrar">
+                <button id="btn_Entrar" onclick="Entrar()">Entrar</button>
+            </div>
+
+            <div class="div_criarConta">
+                Não tem conta? <a href="cadastroPage.html">Criar Conta</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
