@@ -32,6 +32,9 @@
 
 [Acessar Plano de Ação no Notion]( https://www.notion.so/32c986c9cb1b80c5b9f3cfd652c9ef29?v=32c986c9cb1b8074a88c000c820d5883)
 
+## ⚙️ Ferramenta de Gestão
+
+- https://trello.com/invite/b/69b9821b08f841d4fe3362a2/ATTIfa9e7411345e6143ec4b82a1e1832e972262DAC3/sprint-2
 
 
 
