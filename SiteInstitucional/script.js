@@ -1,5 +1,10 @@
 // Declaração de variáveis Globais
 
+let vt_email = [];
+let vt_senha = [];
+let vt_CNPJ = [];
+let vt_razaoSocial = [];
+
 function Entrar(){
 
         let cliente = ipt_email_user.value
@@ -22,10 +27,19 @@ function Entrar(){
     } 
 
 function Cadastrar(){
+    let RazaoSocial = ipt_razao_social.value.trim();
+    vt_razaoSocial.push(RazaoSocial);
+
     let email = ipt_email_user.value.trim();
+    vt_email.push(email);
+
     let CNPJ = ipt_CNPJ.value.trim();
+    vt_CNPJ.push(CNPJ);
+
     let senha = ipt_senha_user.value.trim();
-    let confirmacaoSenha = ipt_confirmaSenha.value.trim();
+    vt_senha.push(senha);
+
+    let confirmacaoSenha = ipt_confirma_senha.value.trim();
 
     if(!email.includes('@') || !email.includes('.')){
         alert("/ Email deve conter @ e um domínio! /");
@@ -43,10 +57,18 @@ function Cadastrar(){
         alert("As senhas não estão iguais!");
     }
     else
-    {
+    {   
         alert("Usuário Criado!");
     }
 
-    
+    ipt_senha_user.value = "";
+    ipt_confirma_senha.value = "";
+    ipt_razao_social.value = "";
+    ipt_email_user.value = "";
+    ipt_CNPJ.value = "";
+    console.log(vt_CNPJ);
+    console.log(email);
+    console.log(senha);
+    console.log(RazaoSocial);
     
 }

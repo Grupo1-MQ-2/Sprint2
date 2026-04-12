@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,43 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    
-    <div class="div_ipt_email">
-        E-mail<br>
-        <input id="ipt_email_user" type="email">
-    </div><br>
+    <div class="cadastroPage">
+        <div class="div_cadastroCard">
 
-    <div class="div_ipt_CNPJ">
-        CNPJ<br>
-        <input id="ipt_CNPJ">
-    </div><br>
+            <div class="div_ipt_razaoSocial">
+                    Razão Social <br>
+                <input id="ipt_razao_social" placeholder="*Arcos Dourados Comércio de Alimentos S.A*">
+            </div><br>
 
-    <div class="div_ipt_senha">
-        Senha <br>
-        <input id="ipt_senha_user" type="password">
-    </div><br>
+            <div class="div_ipt_CNPJ">
+                    CNPJ<br>
+                <input id="ipt_CNPJ" placeholder="12345678000195">
+            </div><br>
 
-    <div class="div_ipt_confirmaSenha">
-        Confirmar Senha<br>
-        <input id="ipt_confirmaSenha" type="password">
-    </div><br>
+            <div class="div_ipt_email">
+                    E-mail<br>
+                <input id="ipt_email_user" type="email" placeholder="emailRepresentante@gmail.com">
+            </div><br>
+            
+            <div class="div_ipt_senha">
+                    Senha <br>
+                <input id="ipt_senha_user" type="password" placeholder="********">
+            </div><br>
 
-    <div class="div_btn_Cadastrar">
-            <button id="btn_Cadastrar" onclick="Cadastrar()">Cadastrar</button> 
-    </div>
+            <div class="div_ipt_senha">
+                    Confirmar Senha <br>
+                <input id="ipt_confirma_senha" type="password" placeholder="********">
+            </div><br>
 
-    <div class="div_btn_Entrar">
-        <a href="loginPage.html">
-            <button id="btn_Entrar">Login</button>
-        </a>
+            <div class="div_btn_Cadastrar">
+                <a href="loginPage.html">
+                    <button id="btn_Cadastrar" onclick="Cadastrar()" >Cadastrar</button>
+                </a>
+            </div>
+
+        </div>
     </div>
 </body>
 </html>

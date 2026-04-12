@@ -1,13 +1,21 @@
 body {
     background-color: rgb(5, 112, 5);
     margin: 0;
-}
+    height: 100px;
+    overflow: hidden; 
+}   
 
-/* Criando Design da Página de Login */
+.cadastroPage {
+    display: flex;
+    height: 100vh;
+    align-items: center;     
+    justify-content: center; 
+    margin-right: 10px;
+} 
 
 .div_LoginPage {
     display: flex;
-    height: 100vh;
+
 }
  
 .div_PainelInfo {
@@ -20,18 +28,30 @@ body {
     gap: 6px;
 }
  
+.div_cadastroCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(48, 46, 46);
+    padding: 50px 50px;
+    width: 400px;       
+    border-radius: 16px;
+}
+
+
 .div_LoginCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgb(48, 46, 46);
-    padding: 40px 48px;   /* espaço interno generoso */
-    margin: 40px;         /* afasta das bordas igualmente */
-    flex: 1;              /* ocupa o espaço restante */
+    padding: 40px 48px;   
+    margin: 40px;         
+    flex: 1;              
     border-radius: 16px;
 }
  
-/* Divs dos campos ocupam toda a largura do card */
+.div_ipt_CNPJ,
+.div_ipt_razaoSocial,
 .div_ipt_email,
 .div_ipt_senha {
     width: 100%;
@@ -39,12 +59,14 @@ body {
     font-size: 14px;
     color: #ccc;
 }
- 
-/* Inputs grandes e com largura total */
+
+#ipt_CNPJ,
+#ipt_razao_social,
+#ipt_confirma_senha,
 #ipt_email_user,
 #ipt_senha_user {
     width: 100%;
-    padding: 10px 14px;
+    padding: 10px 10px;
     font-size: 14px;
     border: 1px solid #555;
     border-radius: 8px;
@@ -54,10 +76,12 @@ body {
     box-sizing: border-box;
 }
  
+.div_btn_Cadastrar,
 .div_btn_Entrar {
     margin-top: 8px;
 }
- 
+
+#btn_Cadastrar,
 #btn_Entrar {
     width: 100%;
     padding: 10px;
@@ -68,7 +92,8 @@ body {
     font-size: 15px;
     cursor: pointer;
 }
- 
+
+
 #btn_Entrar:hover {
     background-color: rgb(7, 140, 7);
 }
