@@ -19,7 +19,7 @@ function Entrar(){
         }
         else 
         {
-            alert(`Conectado! Bem vindo '${cliente}'!`)
+            alert(`Conectado! Bem vindo ${cliente}!`)
         }
 
         ipt_email_user.value = " ";
