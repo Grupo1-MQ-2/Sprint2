@@ -30,115 +30,162 @@
     <div id="divResultadoInvestimento"></div>
     <br>
 </body>
-    <script>
-        function calcularTrimestral() {
-            let areaTotalHectares = Number(inputAreaHectares.value)
-            let perimetroMetros = Number(inputPerimetroMetros.value)
 
-            divPatrimonioRisco.innerHTML = ""
-            divResultadoInvestimento.innerHTML = ""
+<script>
+    function validacoes() {
+      divPatrimonioRisco.innerHTML = "";
+      divResultadoInvestimento.innerHTML = "";
 
-            if (isNaN(areaTotalHectares) || isNaN(perimetroMetros) || areaTotalHectares <= 0 || perimetroMetros <= 0) {
-                divResultadoInvestimento.innerHTML = "<b>Erro:</b> Por favor, insira valores numéricos válidos e maiores que zero para área e perímetro."
-            } else {
-                let valorPlano = 15
-                let nomePlano = "Trimestral"
-                let valorPrejuizoPorHectare = 12500
-                let patrimonioProtegido = areaTotalHectares * valorPrejuizoPorHectare
-                let restoDivisao = perimetroMetros % 30
-                let perimetroSemResto = perimetroMetros - restoDivisao
-                let quantidadeSensores = perimetroSemResto / 30
+      const camposVazios = inputAreaHectares.value == "" || inputPerimetroMetros.value == "";
 
-                if (restoDivisao > 0) {
-                    quantidadeSensores = quantidadeSensores + 1
-                }
+      if (camposVazios) {
+        alert("Os campos de área e perímetro são obrigatórios.");
+        return false;
+      }
 
-                if (quantidadeSensores < 1) {
-                    quantidadeSensores = 1
-                }
+      let area = Number(inputAreaHectares.value);
+      let perimetro = Number(inputPerimetroMetros.value);
 
-                let custoInvestimento = quantidadeSensores * valorPlano
+      const nMin = 0;
+      const areaMax = 500000;
+      const perimMax = 500000;
 
-                let patrimonioFormatado = patrimonioProtegido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                let investimentoFormatado = custoInvestimento.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+      //(Letras, Negativos ou Zero)
+      const valoresInvalidos = isNaN(area) || isNaN(perimetro) || area <= nMin || perimetro <= nMin;
 
-                divPatrimonioRisco.innerHTML = `<b>Atenção:</b> Você possui aproximadamente <b>${patrimonioFormatado}</b> em cana-de-açúcar desprotegida e vulnerável a incêndios.`
-                divResultadoInvestimento.innerHTML = `Para criar uma barreira de proteção no seu perímetro de risco, são necessários <b>${quantidadeSensores} sensores</b>.<br><br>Você selecionou o plano <b>${nomePlano}</b> e o valor total do investimento para blindar sua fazenda é de apenas <b>${investimentoFormatado}</b><small>mensalmente</small>.`
-            }
-        }
+      if (valoresInvalidos) {
+        alert("Valores devem ser numéricos e maiores que zero.");
+        return false;
+      }
 
-        function calcularSemestral() {
-            let areaTotalHectares = Number(inputAreaHectares.value)
-            let perimetroMetros = Number(inputPerimetroMetros.value)
+      // Limites
+      const limitesExcedidos = area > areaMax || perimetro > perimMax;
+      if (limitesExcedidos) {
+        alert("Os valores excedem o limite máximo permitido.");
+        return false;
+      }
 
-            divPatrimonioRisco.innerHTML = ""
-            divResultadoInvestimento.innerHTML = ""
+      // Se chegou até aqui, todas as validações deram true pae
+      return true;
+    }
 
-            if (isNaN(areaTotalHectares) || isNaN(perimetroMetros) || areaTotalHectares <= 0 || perimetroMetros <= 0) {
-                divResultadoInvestimento.innerHTML = "<b>Erro:</b> Por favor, insira valores numéricos válidos e maiores que zero para área e perímetro."
-            } else {
-                let valorPlano = 10
-                let nomePlano = "Semestral"
-                let valorPrejuizoPorHectare = 12500
-                let patrimonioProtegido = areaTotalHectares * valorPrejuizoPorHectare
-                let restoDivisao = perimetroMetros % 30
-                let perimetroSemResto = perimetroMetros - restoDivisao
-                let quantidadeSensores = perimetroSemResto / 30
+    function calcularTrimestral() {
+      // Chama a validação. Se der erro (retornar false) nem segue
+      if (!validacoes()) return;
 
-                if (restoDivisao > 0) {
-                    quantidadeSensores = quantidadeSensores + 1
-                }
+      let areaTotalHectares = Number(inputAreaHectares.value);
+      let perimetroMetros = Number(inputPerimetroMetros.value);
 
-                if (quantidadeSensores < 1) {
-                    quantidadeSensores = 1
-                }
+      let valorPlano = 15;
+      let nomePlano = "Trimestral";
+      let valorPrejuizoPorHectare = 12500;
+      let patrimonioProtegido = areaTotalHectares * valorPrejuizoPorHectare;
+      
+      let restoDivisao = perimetroMetros % 30;
+      let perimetroSemResto = perimetroMetros - restoDivisao;
+      let quantidadeSensores = perimetroSemResto / 30;
 
-                let custoInvestimento = quantidadeSensores * valorPlano
+      if (restoDivisao > 0) {
+        quantidadeSensores = quantidadeSensores + 1;
+      }
 
-                let patrimonioFormatado = patrimonioProtegido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                let investimentoFormatado = custoInvestimento.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+      if (quantidadeSensores < 1) {
+        quantidadeSensores = 1;
+      }
 
-                divPatrimonioRisco.innerHTML = `<b>Atenção:</b> Você possui aproximadamente <b>${patrimonioFormatado}</b> em cana-de-açúcar desprotegida e vulnerável a incêndios.`
-                divResultadoInvestimento.innerHTML = `Para criar uma barreira de proteção no seu perímetro de risco, são necessários <b>${quantidadeSensores} sensores</b>.<br><br>Você selecionou o plano <b>${nomePlano}</b> e o valor total do investimento para blindar sua fazenda é de apenas <b>${investimentoFormatado}</b><small>mensalmente</small>.`
-            }
-        }
+      let custoInvestimento = quantidadeSensores * valorPlano;
 
-        function calcularAnual() {
-            let areaTotalHectares = Number(inputAreaHectares.value)
-            let perimetroMetros = Number(inputPerimetroMetros.value)
+      let patrimonioFormatado = patrimonioProtegido.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+      let investimentoFormatado = custoInvestimento.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
 
-            divPatrimonioRisco.innerHTML = ""
-            divResultadoInvestimento.innerHTML = ""
+      divPatrimonioRisco.innerHTML = `<b>Atenção:</b> Você possui aproximadamente <b>${patrimonioFormatado}</b> em cana-de-açúcar desprotegida e vulnerável a incêndios.`;
+      divResultadoInvestimento.innerHTML = `Para criar uma barreira de proteção no seu perímetro de risco, são necessários <b>${quantidadeSensores} sensores</b>.<br><br>Você selecionou o plano <b>${nomePlano}</b> e o valor total do investimento para blindar sua fazenda é de apenas <b>${investimentoFormatado}</b><small>mensalmente</small>.`;
+    }
 
-            if (isNaN(areaTotalHectares) || isNaN(perimetroMetros) || areaTotalHectares <= 0 || perimetroMetros <= 0) {
-                divResultadoInvestimento.innerHTML = "<b>Erro:</b> Por favor, insira valores numéricos válidos e maiores que zero para área e perímetro."
-            } else {
-                let valorPlano = 8
-                let nomePlano = "Anual"
-                let valorPrejuizoPorHectare = 12500
-                let patrimonioProtegido = areaTotalHectares * valorPrejuizoPorHectare
-                let restoDivisao = perimetroMetros % 30
-                let perimetroSemResto = perimetroMetros - restoDivisao
-                let quantidadeSensores = perimetroSemResto / 30
+    function calcularSemestral() {
+      // Chama a validação. Se der erro (retornar false) nem segue
+      if (!validacoes()) return;
 
-                if (restoDivisao > 0) {
-                    quantidadeSensores = quantidadeSensores + 1
-                }
+      let areaTotalHectares = Number(inputAreaHectares.value);
+      let perimetroMetros = Number(inputPerimetroMetros.value);
 
-                if (quantidadeSensores < 1) {
-                    quantidadeSensores = 1
-                }
+      let valorPlano = 10;
+      let nomePlano = "Semestral";
+      let valorPrejuizoPorHectare = 12500;
+      let patrimonioProtegido = areaTotalHectares * valorPrejuizoPorHectare;
+      
+      let restoDivisao = perimetroMetros % 30;
+      let perimetroSemResto = perimetroMetros - restoDivisao;
+      let quantidadeSensores = perimetroSemResto / 30;
 
-                let custoInvestimento = quantidadeSensores * valorPlano
+      if (restoDivisao > 0) {
+        quantidadeSensores = quantidadeSensores + 1;
+      }
 
-                let patrimonioFormatado = patrimonioProtegido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-                let investimentoFormatado = custoInvestimento.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+      if (quantidadeSensores < 1) {
+        quantidadeSensores = 1;
+      }
 
-                divPatrimonioRisco.innerHTML = `<b>Atenção:</b> Você possui aproximadamente <b>${patrimonioFormatado}</b> em cana-de-açúcar desprotegida e vulnerável a incêndios.`
-                divResultadoInvestimento.innerHTML = `Para criar uma barreira de proteção no seu perímetro de risco, são necessários <b>${quantidadeSensores} sensores</b>.<br><br>Você selecionou o plano <b>${nomePlano}</b> e o valor total do investimento para blindar sua fazenda é de apenas <b>${investimentoFormatado}</b><small>mensalmente</small>.`
-            }
-        }
-    </script>
+      let custoInvestimento = quantidadeSensores * valorPlano;
+
+      let patrimonioFormatado = patrimonioProtegido.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+      let investimentoFormatado = custoInvestimento.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+
+      divPatrimonioRisco.innerHTML = `<b>Atenção:</b> Você possui aproximadamente <b>${patrimonioFormatado}</b> em cana-de-açúcar desprotegida e vulnerável a incêndios.`;
+      divResultadoInvestimento.innerHTML = `Para criar uma barreira de proteção no seu perímetro de risco, são necessários <b>${quantidadeSensores} sensores</b>.<br><br>Você selecionou o plano <b>${nomePlano}</b> e o valor total do investimento para blindar sua fazenda é de apenas <b>${investimentoFormatado}</b><small>mensalmente</small>.`;
+    }
+
+    function calcularAnual() {
+      // Chama a validação. Se der erro (retornar false) nem segue
+      if (!validacoes()) return;
+
+      let areaTotalHectares = Number(inputAreaHectares.value);
+      let perimetroMetros = Number(inputPerimetroMetros.value);
+
+      let valorPlano = 8;
+      let nomePlano = "Anual";
+      let valorPrejuizoPorHectare = 12500;
+      let patrimonioProtegido = areaTotalHectares * valorPrejuizoPorHectare;
+      
+      let restoDivisao = perimetroMetros % 30;
+      let perimetroSemResto = perimetroMetros - restoDivisao;
+      let quantidadeSensores = perimetroSemResto / 30;
+
+      if (restoDivisao > 0) {
+        quantidadeSensores = quantidadeSensores + 1;
+      }
+
+      if (quantidadeSensores < 1) {
+        quantidadeSensores = 1;
+      }
+
+      let custoInvestimento = quantidadeSensores * valorPlano;
+
+      let patrimonioFormatado = patrimonioProtegido.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+      let investimentoFormatado = custoInvestimento.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL",
+      });
+
+      divPatrimonioRisco.innerHTML = `<b>Atenção:</b> Você possui aproximadamente <b>${patrimonioFormatado}</b> em cana-de-açúcar desprotegida e vulnerável a incêndios.`;
+      divResultadoInvestimento.innerHTML = `Para criar uma barreira de proteção no seu perímetro de risco, são necessários <b>${quantidadeSensores} sensores</b>.<br><br>Você selecionou o plano <b>${nomePlano}</b> e o valor total do investimento para blindar sua fazenda é de apenas <b>${investimentoFormatado}</b><small>mensalmente</small>.`;
+    }
+  </script>
 
 
 </html>
