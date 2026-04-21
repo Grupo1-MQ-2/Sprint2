@@ -161,7 +161,7 @@ INSERT INTO leitura (id_leitura, fk_sensor, valor_gas_ppm, data_hora) VALUES
 (15, 15, 740, '2024-07-01 11:10:00'),
 (16, 16, 980, '2024-07-01 11:15:00');
 
--- ALERTA (ppm < 400 = NORMAL | 400-700 = ATENÇÃO | ppm > 700 = CRÍTICO)
+-- ALERTA (ppm <= 4999 -> NORMAL | 5000 <=ppm <=9999 -> ATENÇÃO | ppm > 10000 -> CRÍTICO)
 INSERT INTO alerta (id_alerta, fk_sensor, descricao, nivelDeAlerta, dtAlerta, categoria, fk_idLeitura, fk_idLocalSensor) VALUES
 (1,  1,  'Leitura normal do sensor 1',           'NORMAL',  '2024-07-01', 'LEITURAS',   1,  1),
 (2,  2,  'Nível crítico detectado no sensor 2',  'CRÍTICO', '2024-07-01', 'LEITURAS',   2,  2),
