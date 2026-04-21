@@ -1,84 +1,82 @@
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0%;
-    font-family: arial, sans-serif;
-      background-color: rgb(40, 41, 41);
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-}   
 
 .navbar {
-    background-color: rgb(5, 112, 5);
-    margin: 0;
-    height: 100px;
-    overflow: hidden; 
-    padding: 8px 30px;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 10vh;
+    background-color: #007000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
 }
 
-.main{
-text-align: flex-start;
-padding: 40px;
+.titulo h2 {
+    margin: 5px 0;
 }
 
-.input{
-  width: 250px;  
-  height: 40px;   
-  border-radius: 10px;
-  align-items: center;
- justify-content: center;
+
+.main {
+    background-color: white;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.titulo{
-justify-content: row;
-align-items: flex-start;
 
-display: block;
- line-height: 1; 
-  margin: 0;    
-  
+.input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+    font-size: 18px;
+}
 
-}
-.pequeno {
-    display: center;
-  font-size: 15px;    
-  line-height: 1;
-  margin-top: -25px;
-}
+
 .button {
- display: flex;
- align-items: center;
- justify-content: center;
-   gap: 50px;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
+
 .btn {
-  width: 150px;        
-  height: 60px;      
-  font-size: 18px;     
-  background-color: white;
-  color: black;
-  border: none;
-  border-radius: 8px;
-  justify-content: space-between;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid #007000;
+    background-color: white;
+    color: #007000;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-.hidden {
-  display: none; 
+.btn:hover {
+    background-color: #007000;
+    color: white;
 }
 
-.mensagens{
-display: center;
-flex-direction: column;
-  align-items: center;   
-  margin-top: 20px;
+
+.caixa {
+    background-color: white;
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #007000;
 }
 
-.caixa{
-
-width: 250px;  
- padding: 20px; 
-background-color: white;
-  margin-top: 20px;
-
+.mensagens {
+    color: #333;
+    line-height: 1.6;
 }
