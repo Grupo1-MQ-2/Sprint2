@@ -5,30 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Canalytics</title>
+    <link rel="stylesheet" href="calcstyle.css">
 </head>
 
-<body>
-    <h2>Proteja seu Patrimônio</h2>
-    <label>Informe a quantidade de hectares da sua cultura de cana:</label>
+<body class="body">
+
+    <div class="navbar">
+            <div class="titulo">
+    <h2 style=" font-size: 38px; color: white; ">Calculadora financeira </h2>
+     <div class="pequeno">
+    <h2 style="color: lightgray;">Estime o impacto financeiro de um incêndio no canavial</h2>
+    </div>
+    </div>
+    </div>
+    <div class="main">
+    <label style="font-size: 22px; color: lightgray;">Informe a quantidade de hectares da sua cultura de cana:</label>
+<br>
+    <input type="number" id="inputAreaHectares" class="input">
+<br>
+<br>
     <br>
-    <input type="number" id="inputAreaHectares">
+    <label style="font-size: 22px; color: lightgray;">Informe o perímetro da área da plantação (Em metros):</label>
+<br>
+    <input type="number" id="inputPerimetroMetros" class="input">
+<br>
+<br>
+</div>
+<div class="button">
+    <button class="btn" onclick="calcularTrimestral()">Plano Trimestral (Econômico)</button>
+    
+    <button class="btn" onclick="calcularSemestral()">Plano Semestral (Recomendado)</button>
+
+    <button class="btn" onclick="calcularAnual()">Plano Anual (Premium)</button>
+    </div>
     <br><br>
-
-    <label>Informe o perímetro da área da plantação (Em metros):</label>
+    <div class="caixa">
+    <div class="mensagens">
+    <div id="divPatrimonioRisco" ></div>
     <br>
-    <input type="number" id="inputPerimetroMetros">
-    <br><br>
-
-    <button onclick="calcularTrimestral()">Plano Trimestral (Econômico)</button>
-    <button onclick="calcularSemestral()">Plano Semestral (Recomendado)</button>
-    <button onclick="calcularAnual()">Plano Anual (Premium)</button>
-
-    <br><br>
-
-    <div id="divPatrimonioRisco"></div>
+    <div id="divResultadoInvestimento" ></div>
     <br>
-    <div id="divResultadoInvestimento"></div>
-    <br>
+    </div>
+    </div>
+
 </body>
 
 <script>
