@@ -144,22 +144,22 @@ INSERT INTO localSensor (id_localSensor, fk_sensor, coordenada) VALUES
 
 -- LEITURA
 INSERT INTO leitura (id_leitura, fk_sensor, valor_gas_ppm, data_hora) VALUES
-(1,  1,  120, '2024-07-01 08:00:00'),
-(2,  2,  850, '2024-07-01 08:05:00'),
-(3,  3,  430, '2024-07-01 08:10:00'),
-(4,  4,  990, '2024-07-01 08:15:00'),
-(5,  5,  200, '2024-07-01 09:00:00'),
-(6,  6,  310, '2024-07-01 09:05:00'),
-(7,  7,  760, '2024-07-01 09:10:00'),
-(8,  8,  920, '2024-07-01 09:15:00'),
-(9,  9,  150, '2024-07-01 10:00:00'),
-(10, 10, 480, '2024-07-01 10:05:00'),
-(11, 11, 870, '2024-07-01 10:10:00'),
-(12, 12, 995, '2024-07-01 10:15:00'),
-(13, 13, 100, '2024-07-01 11:00:00'),
-(14, 14, 530, '2024-07-01 11:05:00'),
-(15, 15, 740, '2024-07-01 11:10:00'),
-(16, 16, 980, '2024-07-01 11:15:00');
+(1,  1,  1200, '2024-07-01 08:00:00'),
+(2,  2,  14998, '2024-07-01 08:05:00'),
+(3,  3,  7688, '2024-07-01 08:10:00'),
+(4,  4,  0, '2024-07-01 08:15:00'),
+(5,  5,  2000, '2024-07-01 09:00:00'),
+(6,  6,  6744, '2024-07-01 09:05:00'),
+(7,  7,  0, '2024-07-01 09:10:00'),
+(8,  8,  0, '2024-07-01 09:15:00'),
+(9,  9,  1500, '2024-07-01 10:00:00'),
+(10, 10, 5642, '2024-07-01 10:05:00'),
+(11, 11, 12966, '2024-07-01 10:10:00'),
+(12, 12, 9950, '2024-07-01 10:15:00'),
+(13, 13, 1000, '2024-07-01 11:00:00'),
+(14, 14, 5300, '2024-07-01 11:05:00'),
+(15, 15, 7400, '2024-07-01 11:10:00'),
+(16, 16, 0, '2024-07-01 11:15:00');
 
 -- ALERTA (ppm <= 4999 -> NORMAL | 5000 <=ppm <=9999 -> ATENÇÃO | ppm > 10000 -> CRÍTICO)
 INSERT INTO alerta (id_alerta, fk_sensor, descricao, nivelDeAlerta, dtAlerta, categoria, fk_idLeitura, fk_idLocalSensor) VALUES
@@ -174,11 +174,11 @@ INSERT INTO alerta (id_alerta, fk_sensor, descricao, nivelDeAlerta, dtAlerta, ca
 (9,  9,  'Leitura normal do sensor 9',           'NORMAL',  '2024-07-01', 'LEITURAS',   9,  9),
 (10, 10, 'Nível de atenção no sensor 10',        'ATENÇÃO', '2024-07-01', 'LEITURAS',   10, 10),
 (11, 11, 'Nível crítico detectado no sensor 11', 'CRÍTICO', '2024-07-01', 'LEITURAS',   11, 11),
-(12, 12, 'Concentração máxima — sensor 12',      'CRÍTICO', '2024-07-01', 'MANUTENÇÃO', 12, 12),
+(12, 12, 'Nível de atenção no sensor 12',      'CRÍTICO', '2024-07-01', 'LEITURAS', 12, 12),
 (13, 13, 'Leitura normal do sensor 13',          'NORMAL',  '2024-07-01', 'LEITURAS',   13, 13),
 (14, 14, 'Nível de atenção no sensor 14',        'ATENÇÃO', '2024-07-01', 'LEITURAS',   14, 14),
-(15, 15, 'Nível alto detectado no sensor 15',    'CRÍTICO', '2024-07-01', 'LEITURAS',   15, 15),
-(16, 16, 'Sensor inativo — nível crítico',       'CRÍTICO', '2024-07-01', 'MANUTENÇÃO', 16, 16);
+(15, 15, 'Nível de atenção no sensor 15',    'CRÍTICO', '2024-07-01', 'LEITURAS',   15, 15),
+(16, 16, 'Sensor inativo',       'CRÍTICO', '2024-07-01', 'MANUTENÇÃO', 16, 16);
 
 -- Selecionando informações e planos das empresas clientes
 SELECT e.razao_social AS 'Razão Social', 
