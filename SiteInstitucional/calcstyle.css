@@ -50,15 +50,21 @@ body {
 }
 
 .link-menu-ativo {
-    color: green;
+    color: white;
     font-weight: bold;
+}
+.link-menu:hover {
+    color: #97C459;
+}
+.link-menu-ativo:hover {
+    color: #97C459;
 }
 
 
 
 
 .navbar {
-    
+
     width: 100%;
     padding: 20px 0;
     text-align: center;
@@ -83,7 +89,7 @@ body {
     margin-top: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-size: 18px;
 }
 
@@ -127,12 +133,10 @@ body {
 }
 
 
-.comentario {
 
-}
 
 .rodape-final {
-    background-color: #27500A;
+    background-color: #01352c;
     color: #ffffff;
     text-align: center;
     padding: 30px 0px;

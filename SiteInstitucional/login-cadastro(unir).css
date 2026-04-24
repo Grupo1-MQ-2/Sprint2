@@ -1,29 +1,67 @@
-body {
-    background-color: rgb(5, 112, 5);
-    margin: 0;
-    height: 100px;
-    overflow: hidden; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}   
 
-.cadastroPage {
+body {
+    background-color:  #f5f5f5;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
     display: flex;
-    height: 100vh;
-    align-items: center;     
-    justify-content: center; 
-    margin-right: 10px;
-} 
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.barra-navegacao {
+    background-color: #01352c;
+    padding: 12px 0;
+    width: 100%;
+    
+}
+
+.container-navegacao {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu-lista {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    margin-left: 20px;
+}
+
+.link-menu {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.link-menu:hover {
+    color: #97C459;
+}
+.link-menu-ativo:hover {
+    color: #97C459;
+}
+
+
 
 .div_LoginPage {
     display: flex;
-
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
 }
- 
+
 .div_PainelInfo {
-    color: white;
+    color:#01352c;
     font-family: sans-serif;
     width: 42%;
     padding: 30px 32px;
@@ -31,29 +69,39 @@ body {
     flex-direction: column;
     gap: 6px;
 }
- 
-.div_cadastroCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgb(48, 46, 46);
-    padding: 50px 50px;
-    width: 400px;       
-    border-radius: 16px;
-}
-
 
 .div_LoginCard {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(48, 46, 46);
-    padding: 40px 48px;   
-    margin: 40px;         
-    flex: 1;              
+    background-color: #01352c;
+    padding: 40px 48px;
+    margin: 40px;
+    flex: 1;
+    max-width: 480px;
     border-radius: 16px;
 }
- 
+
+
+.cadastroPage {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.div_cadastroCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#01352c ;
+    padding: 50px;
+    width: 400px;
+    border-radius: 16px;
+}
+
+
 .div_ipt_CNPJ,
 .div_ipt_razaoSocial,
 .div_ipt_email,
@@ -70,16 +118,17 @@ body {
 #ipt_email_user,
 #ipt_senha_user {
     width: 100%;
-    padding: 10px 10px;
+    padding: 10px;
     font-size: 14px;
-    border: 1px solid #555;
+    border: 1px solid  #f5f5f5;
     border-radius: 8px;
-    background-color: #555;
-    color: #fff;
+    background-color:  #f5f5f5;
+    color: #000000;
     margin-top: 4px;
     box-sizing: border-box;
 }
- 
+
+
 .div_btn_Cadastrar,
 .div_btn_Entrar {
     margin-top: 8px;
@@ -97,20 +146,27 @@ body {
     cursor: pointer;
 }
 
-
+#btn_Cadastrar:hover,
 #btn_Entrar:hover {
     background-color: rgb(7, 140, 7);
 }
- 
+
+
 .div_criarConta {
     margin-top: 12px;
     font-size: 13px;
     color: #aaa;
 }
- 
+
 .div_criarConta a {
-    color: rgb(5, 180, 5);
+    color:  #f5f5f5;
 }
+.rodape-final {
+    background-color: #01352c;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0px;}
+
 
 .kpi-container {
     display: flex;
@@ -141,6 +197,7 @@ body {
     font-size: 12px;
     margin: 5px 0 0 0;
 }
+
 
 h1 {
     color: #3B6D11;
@@ -185,11 +242,11 @@ nav a {
 }
 
 .btn-cadastro {
-    background-color:white;
+    background-color: white;
     color: #3B6D11;
     border: 2px solid #3B6D11;
     padding: 8px 20px;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
-}           
+}

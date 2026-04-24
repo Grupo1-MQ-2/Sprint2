@@ -50,7 +50,7 @@ body {
 }
 
 .link-menu-ativo {
-    color: #3B6D11;
+    color: white;
     font-weight: bold;
 }
 
@@ -105,14 +105,14 @@ body {
 }
 
 .bloco-etapa {
-    background-color: #4ba119;
+    background-color: #97C459;
     border-radius: 16px;
     padding: 30px;
 }
 
 .bloco-etapa-invertido {
     flex-direction: row-reverse;
-    background-color: #4ba119;
+    background-color: #97C459;
     border-radius: 16px;
     padding: 30px;
 }
@@ -174,7 +174,7 @@ h1 span {
 }
 
 .sub1{
-    color: green ;
+    color: #97C459 ;
 }
 
 .alinhamento-central {
@@ -191,7 +191,7 @@ h1 span {
     padding: 25px;
     border-radius: 10px;
     flex: 1;
-    border-top: 5px solid #3B6D11;
+    border-top: 5px solid #97C459;
     margin: 0px 10px;
 }
 
@@ -206,7 +206,7 @@ h1 span {
 }
 
 .rodape-final {
-    background-color: #27500A;
+    background-color: #01352c;
     color: #ffffff;
     text-align: center;
     padding: 30px 0px;
@@ -218,6 +218,9 @@ h1 span {
 
 .titulo-etapa {
     font-size: 22px;
-    color: #d3d0d0;
+    color: #01352c;
     margin-bottom: 10px;
+}
+.link-menu:hover {
+    color: #97C459;
 }
