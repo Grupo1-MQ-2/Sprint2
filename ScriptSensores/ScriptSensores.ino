@@ -20,7 +20,7 @@ void loop() {
   }
 
   // Serial.print("Valor saída do sensor: ");
-  Serial.println(ValorSensor);
+  Serial.println(ValorSensor * 10);
   // Serial.print(" -> Porcentagem: ");
   // Serial.print(porcentagem);
   // Serial.println("%");
